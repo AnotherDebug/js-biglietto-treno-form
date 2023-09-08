@@ -9,12 +9,17 @@
 h1 {
     text-align: center;
     text-transform: uppercase;
-    /* color: white; */
     padding: 20px 0;
 }
 
+h4 {
+    text-transform: uppercase;
+}
 
 
+/* .container .row .col:last-child {
+    height: 150px;
+} */
 
 
 
