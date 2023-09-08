@@ -25,43 +25,59 @@
 
                 <div class="row flex-column bg-white rounded-3 border-black color-red-ad p-3 ">
                     <div class="col">
+
+
                         <form class="row g-3 needs-validation text-center" novalidate>
                             <div class="col-md-4">
-                              <label for="validationCustom01" class="form-label">First name</label>
-                              <input type="text" class="form-control" id="validationCustom01" value="Mark" required>
-                              <div class="valid-feedback">
-                                Looks good!
-                              </div>
+                                <label for="validationCustom01" class="form-label">Nome</label>
+                                <input type="text" class="form-control" id="validationCustom01"
+                                    placeholder="Inserisci il tuo nome" required>
+                               
                             </div>
                             <div class="col-md-4">
-                              <label for="validationCustom02" class="form-label">Last name</label>
-                              <input type="text" class="form-control" id="validationCustom02" value="Otto" required>
-                              <div class="valid-feedback">
-                                Looks good!
-                              </div>
+                                <label for="validationCustom02" class="form-label">Km da percorrere</label>
+                                <input type="text" class="form-control" id="validationCustom02"
+                                    placeholder="Inserisci i km" required>
+                                
                             </div>
                             <div class="col-md-4">
-                                <label for="validationCustom04" class="form-label">State</label>
+                                <label for="validationCustom04" class="form-label">Fascia d'età</label>
                                 <select class="form-select" id="validationCustom04" required>
-                                  <option selected disabled value="">Choose...</option>
-                                  <option>...</option>
+                                    <option selected disabled value="">Scegli l'età...</option>
+                                    <option value="minorenne">Minorenne</option>
+                                    <option value="maggiorenne">Maggiorenne</option>
+                                    <option value="anziano">Over 65</option>
                                 </select>
-                                <div class="invalid-feedback">
-                                  Please select a valid state.
-                                </div>
-                            </div>
                             
-                        
-                            <div class="col-12 text-center ">
-                              <button class="btn btn-primary me-3" type="submit">Genera</button>
-                              <button class="btn btn-primary" type="reset">Annulla</button>
                             </div>
-                          </form>
+
+
+                            <div class="col-12 text-center ">
+                                <button class="btn btn-primary me-3" type="submit">Genera</button>
+                                <button class="btn btn-primary" type="reset">Annulla</button>
+                            </div>
+                        </form>
+
+
                     </div>
                 </div>
 
             </div>
-            <div class="col debug">b</div>
+
+            <div class="col">
+                <h1>il tuo biglietto</h1>
+                <div class="row bg-white text-black">
+                    <div class="col debug">
+                        <div class="row p-4 ">
+                            <h4>detteglio passeggero</h4>
+                            <div id="passenger" class="col-2 debug">a</div>
+                            <div class="col-2 debug">s</div>
+                            <div class="col-2 debug">d</div>
+                            <div class="col debug">f</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
