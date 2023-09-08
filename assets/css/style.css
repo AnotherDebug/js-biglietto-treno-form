@@ -5,7 +5,8 @@
 h1 {
     text-align: center;
     text-transform: uppercase;
-    color: white;
+    /* color: white; */
+    padding: 20px 0;
 }
 
 
