@@ -20,9 +20,13 @@ Creare due variabili con il valore dello sconto, uno per i minorenni, uno per gl
 
 // 1.
 
-const kmTravel = 100 //parseInt(prompt("Quanti chilometri desideri percorrere?"));
+let firstName = document.querySelector('#firstname').value;
+let travel = document.querySelector('#travel').value;
+let UserAge = document.querySelector('#age').value;
 
-const age = 25 //parseInt(prompt("Quanti anni hai?"));
+const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
+
+const age = 20; //parseInt(prompt("Quanti anni hai?"));
 
 let message;
 
@@ -37,14 +41,20 @@ const discountOverAge = 40;
 let ticket = kmTravel * price;
 
 let ticketDiscount = ticket;
-
 // 3.
 
 if (age < 18) {
   ticketDiscount *= 1 - discountUnderAge / 100;
-  console.log(ticketDiscount);
-
+  console.log(ticketDiscount.toFixed(2));
 } else if (age >= 65) {
   ticketDiscount *= 1 - discountOverAge / 100;
-  console.log(ticketDiscount);
-} 
+  console.log(ticketDiscount.toFixed(2));
+} else {
+    console.log(ticketDiscount.toFixed(2));
+}
+
+console.log(firstname);
+
+
+
+
