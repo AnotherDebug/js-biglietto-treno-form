@@ -21,78 +21,40 @@ Creare due variabili con il valore dello sconto, uno per i minorenni, uno per gl
 */
 
 // 1.
-
-const firstNameRef = document.getElementById('firstname');
+// dichiarazione dei riferimenti
+const firstNameRef = document.getElementById("firstname");
 const distanceRef = document.getElementById("distance");
-const userAgeRef = document.getElementById("age");
+const userAgeRef = document.getElementById("userAge");
 const buttonGenRef = document.getElementById("btn-1");
 const buttonResRef = document.getElementById("btn-2");
+const ticketPriceRef = document.getElementById("ticketPrice");
 
 // const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
 // const age = 20; //parseInt(prompt("Quanti anni hai?"));
 
-let message;
 
 // 2.
-
-const price = 0.21;
+// dichiarazione dei valori costanti
+const tariff = 0.21;
 const discountUnderAge = 20;
 const discountOverAge = 40;
-let ticket = travel * price;
-let ticketDiscount = ticket;
+
 // 3.
-
+// evento onclick del pulsante genera
 buttonGenRef.addEventListener("click", function () {
-
   const userAge = userAgeRef.value;
+  const distance = parseFloat(distanceRef.value.replace(",", "."));
 
-  if (userAge === 'min') {
-    ticketDiscount *= 1 - discountUnderAge / 100;
-    
-  } else if (userAge === 'magg') {
-    
-  } else if (userAge === 'anz') {
-    ticketDiscount *= 1 - discountOverAge / 100;
+  if (userAge !== "" && distance !== NaN) {
+    let ticketPrice = distance * tariff;
+    if (userAge === "min") {
+      ticketPrice *= 1 - discountUnderAge / 100;
+    } else if (userAge === "anz") {
+      ticketPrice *= 1 - discountOverAge / 100;
+    }
+    debugger;
+    ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
   }
-
-  const distance = parseFloat(distanceRef.value);
-
-  if (userAge !== '' && ){
-
-  }
-
 });
 
 
-
-
-
-// const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
-// const age = 20; //parseInt(prompt("Quanti anni hai?"));
-
-// let message;
-
-// // 2.
-
-// const price = 0.21;
-
-// const discountUnderAge = 20;
-
-// const discountOverAge = 40;
-
-// let ticket = kmTravel * price;
-
-// let ticketDiscount = ticket;
-// // 3.
-
-// if (age < 18) {
-//   ticketDiscount *= 1 - discountUnderAge / 100;
-//   console.log(ticketDiscount.toFixed(2));
-// } else if (age >= 65) {
-//   ticketDiscount *= 1 - discountOverAge / 100;
-//   console.log(ticketDiscount.toFixed(2));
-// } else {
-//     console.log(ticketDiscount.toFixed(2));
-// }
-
-// console.log(firstname);
