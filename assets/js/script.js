@@ -25,9 +25,9 @@ Creare due variabili con il valore dello sconto, uno per i minorenni, uno per gl
 const firstNameRef = document.getElementById('firstname');
 const travelRef = parseInt(document.getElementById("travel"));
 const userAgeRef = document.getElementById("age");
-const buttonGen = document.getElementById("btn-1");
-const buttonRes = document.getElementById("btn-2");
-debugger;
+const buttonGenRef = document.getElementById("btn-1");
+const buttonResRef = document.getElementById("btn-2");
+
 // const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
 // const age = 20; //parseInt(prompt("Quanti anni hai?"));
 
@@ -42,22 +42,18 @@ let ticket = travel * price;
 let ticketDiscount = ticket;
 // 3.
 
-buttonGen.addEventListener("click", function () {
-  if (userAge < 18) {
+buttonGenRef.addEventListener("click", function () {
+  const userAge = userAgeRef.value;
+  if (userAge === 'min') {
     ticketDiscount *= 1 - discountUnderAge / 100;
-    console.log(ticketDiscount.toFixed(2));
-  } else if (userAge >= 65) {
+    
+  } else if (userAge === 'magg') {
+    
+  } else if (userAge === 'anz') {
     ticketDiscount *= 1 - discountOverAge / 100;
-    console.log(ticketDiscount.toFixed(2));
-  } else {
-    console.log(ticketDiscount.toFixed(2));
   }
 });
 
-buttonGen.addEventListener("click", function () {
-  firstName.value
-  console.log('mi hai cliccato');
-});
 
 
 
