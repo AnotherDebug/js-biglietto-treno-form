@@ -32,6 +32,7 @@ const offerRef = document.getElementById("offer");
 const carriageRef = document.getElementById("carriage");
 const cpCodeRef = document.getElementById("cpCode");
 const ticketPriceRef = document.getElementById("ticketPrice");
+const toggleTicketRef = document.getElementById('toggleTicket');
 const minCarriage = 1;
 const maxCarriage = 5;
 const minCodeCp = 1;
@@ -45,7 +46,12 @@ const maxCodeCp = 100000;
 const tariff = 0.21;
 const discountUnderAge = 20;
 const discountOverAge = 40;
+
+// dichiarazione variabile message
 let message;
+
+// flag
+let ticketVisible = true;
 
 // 3.
 // evento onclick del pulsante Genera
@@ -75,13 +81,20 @@ buttonGenRef.addEventListener("click", function () {
     );
     cpCodeRef.innerHTML = cpCode.toString().padStart(6, "0");
     ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
+
+    if(ticketVisible){
+      toggleTicketRef.classList.remove('d-none');
+    }
   }
 });
 
 
 
+
+
 // evento onclick del pulsante Annulla
-buttonResRef.addEventListener('click', function(){
+buttonResRef.addEventListener('click', function() {
+
   firstNameRef.value = '';
   passengerRef.innerHTML = '';
   distanceRef.value = '';
@@ -90,4 +103,9 @@ buttonResRef.addEventListener('click', function(){
   carriageRef.innerHTML = '';
   cpCodeRef.innerHTML = '';
   ticketPriceRef.innerHTML = '';
+
+  if(ticketVisible) {
+    toggleTicketRef.classList.add('d-none');
+  }
+
 });
