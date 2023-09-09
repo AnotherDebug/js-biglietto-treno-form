@@ -6,6 +6,8 @@ Calcolo del prezzo del biglietto del treno.
 
 inserire all'interno delle variabili parsInt per assicurare un valore numerico.
 
+creo due variabili che richiamano il percorso dei button 'Genera' e 'Annulla'
+
 
 2. Creare una variabile con il prezzo al chilometro;
 
@@ -20,13 +22,12 @@ Creare due variabili con il valore dello sconto, uno per i minorenni, uno per gl
 
 // 1.
 
-let firstName = document.querySelector('#firstname');
-let travel = document.querySelector('#travel');
-let userAge = document.querySelector('#age');
-const buttonGen = document.getElementById('btn-1');
-const buttonRes = document.getElementById('btn-2');
-
-
+const firstNameRef = document.getElementById('firstname');
+const travelRef = parseInt(document.getElementById("travel"));
+const userAgeRef = document.getElementById("age");
+const buttonGen = document.getElementById("btn-1");
+const buttonRes = document.getElementById("btn-2");
+debugger;
 // const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
 // const age = 20; //parseInt(prompt("Quanti anni hai?"));
 
@@ -38,24 +39,25 @@ const price = 0.21;
 const discountUnderAge = 20;
 const discountOverAge = 40;
 let ticket = travel * price;
-
 let ticketDiscount = ticket;
 // 3.
 
-if (userAge < 18) {
-  ticketDiscount *= 1 - discountUnderAge / 100;
-  console.log(ticketDiscount.toFixed(2));
-} else if (userAge >= 65) {
-  ticketDiscount *= 1 - discountOverAge / 100;
-  console.log(ticketDiscount.toFixed(2));
-} else {
+buttonGen.addEventListener("click", function () {
+  if (userAge < 18) {
+    ticketDiscount *= 1 - discountUnderAge / 100;
     console.log(ticketDiscount.toFixed(2));
-}
+  } else if (userAge >= 65) {
+    ticketDiscount *= 1 - discountOverAge / 100;
+    console.log(ticketDiscount.toFixed(2));
+  } else {
+    console.log(ticketDiscount.toFixed(2));
+  }
+});
 
-console.log(firstname);
-
-
-
+buttonGen.addEventListener("click", function () {
+  firstName.value
+  console.log('mi hai cliccato');
+});
 
 
 
