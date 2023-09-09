@@ -82,5 +82,12 @@ buttonGenRef.addEventListener("click", function () {
 
 // evento onclick del pulsante Annulla
 buttonResRef.addEventListener('click', function(){
-  passengerRef.innerHTML = firstNameRef.value;
+  firstNameRef.value = '';
+  passengerRef.innerHTML = '';
+  distanceRef.value = '';
+  userAgeRef.value = '';
+  offerRef.innerHTML = '';
+  carriageRef.innerHTML = '';
+  cpCodeRef.innerHTML = '';
+  ticketPriceRef.innerHTML = '';
 });
