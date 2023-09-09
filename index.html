@@ -41,7 +41,7 @@
                         </div>
                         <div class="col-md-4">
                             <label for="age" class="form-label">Fascia d'età</label>
-                            <select id="Userage" class="form-select" required>
+                            <select id="userAge" class="form-select" required>
                                 <option selected disabled value="">Scegli l'età...</option>
                                 <option value="min">Minorenne</option>
                                 <option value="magg">Maggiorenne</option>
@@ -51,8 +51,8 @@
                         </div>
 
 
-                        <div class="col-12 text-center ">
-                            <button id="btn-1" onclick="generateTicket()" class="btn btn-primary me-3">Genera</button>
+                        <div class="col-12 text-center pt-4">
+                            <button id="btn-1" class="btn btn-primary me-3">Genera</button>
                             <button id="btn-2" class="btn btn-primary">Annulla</button>
                         </div>
 
@@ -69,10 +69,19 @@
                     <div class="col debug">
                         <div class="row p-4 ">
                             <h4>detteglio passeggero</h4>
-                            <div id="passenger" class="col-2 debug">a</div>
+                            <div class="col-2 debug">
+                                <h4></h4>
+                                <span id="passenger"></span>
+                            </div>
                             <div class="col-2 debug">s</div>
-                            <div class="col-2 debug">d</div>
-                            <div class="col debug">f</div>
+                            <div class="col-2 debug">
+                                <h4></h4>
+                                <span></span>
+                            </div>
+                            <div class="col debug">
+                                <h4></h4>
+                                <span id="ticketPrice"></span>
+                            </div>
                         </div>
                     </div>
                 </div>
