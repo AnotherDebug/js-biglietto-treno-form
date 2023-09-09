@@ -2,6 +2,10 @@
     background-color: #b71248;
 }
 
+.bg-gray-ad {
+    background-color: gray;
+}
+
 .color-red-ad {
     color: #b71248;
 }
@@ -16,19 +20,13 @@ h4 {
     text-transform: uppercase;
 }
 
-
-/* .container .row .col:last-child {
-    height: 150px;
-} */
-
-
-
-
-
-
-
-/* !"DEBUG" DA ELIMINARE TERMINATO IL CODICE*/
-.debug {
-    background-color: rgba(0, 102, 255, 0.5);
-    border: 1px solid #000;
+#toggleTicket .row .col {
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
 }
+
+
+
+
+
+
