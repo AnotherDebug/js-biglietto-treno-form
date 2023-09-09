@@ -34,6 +34,8 @@ const cpCodeRef = document.getElementById('cpCode');
 const ticketPriceRef = document.getElementById("ticketPrice");
 const minCarriage = 1;
 const maxCarriage = 5;
+const minCodeCp = 1;
+const maxCodeCp = 100000;
 
 // const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
 // const age = 20; //parseInt(prompt("Quanti anni hai?"));
@@ -67,6 +69,8 @@ buttonGenRef.addEventListener("click", function () {
     offerRef.innerHTML = message;
     const carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minCarriage);
     carriageRef.innerHTML = carriage;
+    const cpCode = Math.floor(Math.random() * (maxCodeCp - minCodeCp + 1) + minCodeCp);
+    cpCodeRef.innerHTML = cpCode.toString().padStart(6, '0');
     ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
 
   }
