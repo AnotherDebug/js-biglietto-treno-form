@@ -27,33 +27,32 @@
                     <div class="col">
 
                         <div class="row">
-                            <div class="col-md-4">
+
+                            <div class="col-md-4 text-center fw-bold d-flex flex-column align-items-center">
                                 <label for="firstName" class="form-label">Nome Cognome</label>
-                                <input id="firstName" type="text" class="form-control"
+                                <input id="firstName" type="text" class="form-control border-red-ad w-75"
                                     placeholder="Inserisci il tuo nome" required>
-
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-4 text-center fw-bold d-flex flex-column align-items-center">
                                 <label for="distance" class="form-label">Km da percorrere</label>
-                                <input id="distance" type="text" class="form-control" placeholder="Inserisci i km"
+                                <input id="distance" type="text" class="form-control border-red-ad w-75" placeholder="Inserisci i km"
                                     required>
-
                             </div>
-                            <div class="col-md-4">
+
+                            <div class="col-md-4 text-center fw-bold d-flex flex-column align-items-center">
                                 <label for="age" class="form-label">Fascia d'età</label>
-                                <select id="userAge" class="form-select" required>
+                                <select id="userAge" class="form-select border-red-ad w-60" required>
                                     <option selected disabled value="">Scegli l'età...</option>
                                     <option value="min">Minorenne</option>
                                     <option value="magg">Maggiorenne</option>
                                     <option value="anz">Over 65</option>
                                 </select>
-
                             </div>
 
-
-                            <div class="col-12 text-center pt-4">
-                                <button id="btn-1" class="btn btn-primary me-3">Genera</button>
-                                <button id="btn-2" class="btn btn-primary">Annulla</button>
+                            <div class="col-12 text-center pt-5">
+                                <button id="btn-1" class="btn btn-primary me-3 bg-lightgray-ad color-red-ad fw-bold border-gray-ad">Genera</button>
+                                <button id="btn-2" class="btn btn-primary bg-lightgray-ad color-red-ad fw-bold border-gray-ad">Annulla</button>
                             </div>
 
                         </div>
@@ -74,23 +73,23 @@
                     <div class="col">
                         <div class="row p-4 ">
                             <h4>detteglio passeggero</h4>
-                            <div class="col-3 bg-gray-ad">
-                                <h5>nome passeggero</h5>
+                            <div class="col-3 bg-gray-ad pt-4 pb-5 ">
+                                <h5 class="text-uppercase">nome passeggero</h5>
                                 <span id="passenger" class="fw-bold"></span>
                             </div>
-                            <div class="col">
+                            <div class="col pt-4">
                                 <p class="fw-bold">offerta</p>
                                 <span id="offer"></span>
                             </div>
-                            <div class="col">
+                            <div class="col pt-4">
                                 <p class="fw-bold">carrozza</p>
                                 <span id="carriage"></span>
                             </div>
-                            <div class="col">
+                            <div class="col pt-4">
                                 <p class="fw-bold">codice CP</p>
                                 <span id="cpCode"></span>
                             </div>
-                            <div class="col">
+                            <div class="col pt-4">
                                 <p class="fw-bold">Costo biglietto</p>
                                 <span id="ticketPrice"></span>
                             </div>
