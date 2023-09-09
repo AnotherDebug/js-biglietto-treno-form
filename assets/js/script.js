@@ -32,6 +32,9 @@ const offerRef = document.getElementById('offer');
 const carriageRef = document.getElementById('carriage');
 const cpCodeRef = document.getElementById('cpCode');
 const ticketPriceRef = document.getElementById("ticketPrice");
+const minCarriage = 1;
+const maxCarriage = 5;
+
 // const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
 // const age = 20; //parseInt(prompt("Quanti anni hai?"));
 
@@ -60,8 +63,10 @@ buttonGenRef.addEventListener("click", function () {
     }else{
       message = 'Biglietto standard';
     }
-    offerRef.innerHTML = message;
     passengerRef.innerHTML = firstNameRef.value;
+    offerRef.innerHTML = message;
+    const carriage = Math.floor(Math.random() * (maxCarriage - minCarriage + 1) + minCarriage);
+    carriageRef.innerHTML = carriage;
     ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
 
   }
