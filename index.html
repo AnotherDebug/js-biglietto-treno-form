@@ -23,38 +23,41 @@
             <h1>calcola il prezzo del tuo biglietto</h1>
             <div class="col mb-5">
 
-                <div class="row flex-column bg-white rounded-3 border-black color-red-ad p-3 ">
+                <div class="row bg-white rounded-3 border-black color-red-ad p-3 ">
                     <div class="col">
 
+                        <div class="row">
+                            <div class="col-md-4">
+                                <label for="firstName" class="form-label">Nome Cognome</label>
+                                <input id="firstName" type="text" class="form-control"
+                                    placeholder="Inserisci il tuo nome" required>
+
+                            </div>
+                            <div class="col-md-4">
+                                <label for="distance" class="form-label">Km da percorrere</label>
+                                <input id="distance" type="text" class="form-control" placeholder="Inserisci i km"
+                                    required>
+
+                            </div>
+                            <div class="col-md-4">
+                                <label for="age" class="form-label">Fascia d'età</label>
+                                <select id="userAge" class="form-select" required>
+                                    <option selected disabled value="">Scegli l'età...</option>
+                                    <option value="min">Minorenne</option>
+                                    <option value="magg">Maggiorenne</option>
+                                    <option value="anz">Over 65</option>
+                                </select>
+
+                            </div>
 
 
-                        <div class="col-md-4">
-                            <label for="firstName" class="form-label">Nome Cognome</label>
-                            <input id="firstName" type="text" class="form-control" placeholder="Inserisci il tuo nome"
-                                required>
+                            <div class="col-12 text-center pt-4">
+                                <button id="btn-1" class="btn btn-primary me-3">Genera</button>
+                                <button id="btn-2" class="btn btn-primary">Annulla</button>
+                            </div>
 
                         </div>
-                        <div class="col-md-4">
-                            <label for="distance" class="form-label">Km da percorrere</label>
-                            <input id="distance" type="text" class="form-control" placeholder="Inserisci i km" required>
 
-                        </div>
-                        <div class="col-md-4">
-                            <label for="age" class="form-label">Fascia d'età</label>
-                            <select id="userAge" class="form-select" required>
-                                <option selected disabled value="">Scegli l'età...</option>
-                                <option value="min">Minorenne</option>
-                                <option value="magg">Maggiorenne</option>
-                                <option value="anz">Over 65</option>
-                            </select>
-
-                        </div>
-
-
-                        <div class="col-12 text-center pt-4">
-                            <button id="btn-1" class="btn btn-primary me-3">Genera</button>
-                            <button id="btn-2" class="btn btn-primary">Annulla</button>
-                        </div>
 
 
 
