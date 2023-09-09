@@ -27,36 +27,35 @@
                     <div class="col">
 
 
-                        <form class="row g-3 text-center" novalidate>
-                            <div class="col-md-4">
-                                <label for="firstname" class="form-label">Nome Cognome</label>
-                                <input id="firstname" type="text" class="form-control"
-                                    placeholder="Inserisci il tuo nome" required>
 
-                            </div>
-                            <div class="col-md-4">
-                                <label for="travel" class="form-label">Km da percorrere</label>
-                                <input id="travel" type="text" class="form-control" placeholder="Inserisci i km"
-                                    required>
+                        <div class="col-md-4">
+                            <label for="firstname" class="form-label">Nome Cognome</label>
+                            <input id="firstname" type="text" class="form-control" placeholder="Inserisci il tuo nome"
+                                required>
 
-                            </div>
-                            <div class="col-md-4">
-                                <label for="age" class="form-label">Fascia d'età</label>
-                                <select id="Userage" class="form-select"  required>
-                                    <option selected disabled value="">Scegli l'età...</option>
-                                    <option value="minorenne">Minorenne</option>
-                                    <option value="maggiorenne">Maggiorenne</option>
-                                    <option value="anziano">Over 65</option>
-                                </select>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="travel" class="form-label">Km da percorrere</label>
+                            <input id="travel" type="text" class="form-control" placeholder="Inserisci i km" required>
 
-                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="age" class="form-label">Fascia d'età</label>
+                            <select id="Userage" class="form-select" required>
+                                <option selected disabled value="">Scegli l'età...</option>
+                                <option value="min">Minorenne</option>
+                                <option value="magg">Maggiorenne</option>
+                                <option value="anz">Over 65</option>
+                            </select>
+
+                        </div>
 
 
-                            <div class="col-12 text-center ">
-                                <button id="btn-1" class="btn btn-primary me-3" type="submit">Genera</button>
-                                <button id="btn-2" class="btn btn-primary" type="reset">Annulla</button>
-                            </div>
-                        </form>
+                        <div class="col-12 text-center ">
+                            <button id="btn-1" onclick="generateTicket()" class="btn btn-primary me-3">Genera</button>
+                            <button id="btn-2" class="btn btn-primary">Annulla</button>
+                        </div>
+
 
 
                     </div>
