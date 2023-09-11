@@ -56,9 +56,9 @@ let ticketVisible = true;
 // 3.
 // evento onclick del pulsante Genera
 buttonGenRef.addEventListener("click", function () {
-  const userAge = userAgeRef.value;
+  const userAge = parseInt(userAgeRef.value);
   const distance = parseFloat(distanceRef.value.replace(",", "."));
-
+console.log(typeof userAge);
   if (userAge !== "" && distance !== NaN) {
     let ticketPrice = distance * tariff;
     if (userAge === "min") {
