@@ -40,36 +40,28 @@ const maxCarriage = 5;
 const minCodeCp = 1;
 const maxCodeCp = 100000;
 
-
-
 // 2.
 // dichiarazione dei valori costanti
 const tariff = 0.21;
 const discountUnderAge = 20;
 const discountOverAge = 40;
 
-
-
 // dichiarazione variabile message
 let message;
-
-// flag
-let ticketVisible = true;
 
 // 3.
 // evento onclick del pulsante Genera
 buttonGenRef.addEventListener("click", generator);
 
 // evento onclick del pulsante Annulla
-buttonResRef.addEventListener("click", function () {
-  firstNameRef.value = "";
-  distanceRef.value = "";
-  userAgeRef.value = "";
+buttonResRef.addEventListener("click", reset);
 
-  if (ticketVisible) {
-    toggleTicketRef.classList.add("d-none");
-  }
-});
+
+
+
+
+
+
 
 /*************************************************
     FUNCTIONS
@@ -101,12 +93,17 @@ function generator() {
     cpCodeRef.innerHTML = cpCode.toString().padStart(6, "0");
     ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
 
-    if (ticketVisible) {
-      toggleTicketRef.classList.remove("d-none");
-    }
+    toggleTicketRef.classList.remove("d-none");
   }
-};
+}
 
+function reset() {
+  firstNameRef.value = "";
+  distanceRef.value = "";
+  userAgeRef.value = "";
+
+  toggleTicketRef.classList.add("d-none");
+};
 
 /**
  *
@@ -115,5 +112,15 @@ function generator() {
  */
 function randomizer(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
-}
+};
 
+/**
+ * 
+ * @param {number} price 
+ * @param {number} discount 
+ * @returns 
+ */
+function priceDiscount(price, discount) {
+  let result = price-((price*discount)/100);
+  return result;
+};
