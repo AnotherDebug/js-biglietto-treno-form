@@ -58,7 +58,29 @@ let ticketVisible = true;
 
 // 3.
 // evento onclick del pulsante Genera
-buttonGenRef.addEventListener("click", function () {
+buttonGenRef.addEventListener("click", generator);
+
+// evento onclick del pulsante Annulla
+buttonResRef.addEventListener("click", function () {
+  firstNameRef.value = "";
+  passengerRef.innerHTML = "";
+  distanceRef.value = "";
+  userAgeRef.value = "";
+  offerRef.innerHTML = "";
+  carriageRef.innerHTML = "";
+  cpCodeRef.innerHTML = "";
+  ticketPriceRef.innerHTML = "";
+
+  if (ticketVisible) {
+    toggleTicketRef.classList.add("d-none");
+  }
+});
+
+/*************************************************
+    FUNCTIONS
+ *************************************************/
+
+function generator() {
   const userAge = userAgeRef.value;
   console.log(userAge);
   const distance = parseFloat(distanceRef.value.replace(",", "."));
@@ -88,23 +110,8 @@ buttonGenRef.addEventListener("click", function () {
       toggleTicketRef.classList.remove("d-none");
     }
   }
-});
+};
 
-// evento onclick del pulsante Annulla
-buttonResRef.addEventListener("click", function () {
-  firstNameRef.value = "";
-  passengerRef.innerHTML = "";
-  distanceRef.value = "";
-  userAgeRef.value = "";
-  offerRef.innerHTML = "";
-  carriageRef.innerHTML = "";
-  cpCodeRef.innerHTML = "";
-  ticketPriceRef.innerHTML = "";
-
-  if (ticketVisible) {
-    toggleTicketRef.classList.add("d-none");
-  }
-});
 
 /**
  *
