@@ -113,14 +113,3 @@ function reset() {
 function randomizer(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 };
-
-/**
- * 
- * @param {number} price 
- * @param {number} discount 
- * @returns 
- */
-function priceDiscount(price, discount) {
-  let result = price-((price*discount)/100);
-  return result;
-};
