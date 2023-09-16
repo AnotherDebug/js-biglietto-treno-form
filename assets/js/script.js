@@ -32,20 +32,23 @@ const offerRef = document.getElementById("offer");
 const carriageRef = document.getElementById("carriage");
 const cpCodeRef = document.getElementById("cpCode");
 const ticketPriceRef = document.getElementById("ticketPrice");
-const toggleTicketRef = document.getElementById('toggleTicket');
+const toggleTicketRef = document.getElementById("toggleTicket");
+
+//intervalli numerici per randomizer
 const minCarriage = 1;
 const maxCarriage = 5;
 const minCodeCp = 1;
 const maxCodeCp = 100000;
 
-// const kmTravel = 100; //parseInt(prompt("Quanti chilometri desideri percorrere?"));
-// const age = 20; //parseInt(prompt("Quanti anni hai?"));
+
 
 // 2.
 // dichiarazione dei valori costanti
 const tariff = 0.21;
 const discountUnderAge = 20;
 const discountOverAge = 40;
+
+
 
 // dichiarazione variabile message
 let message;
@@ -56,10 +59,12 @@ let ticketVisible = true;
 // 3.
 // evento onclick del pulsante Genera
 buttonGenRef.addEventListener("click", function () {
-  const userAge = parseInt(userAgeRef.value);
+  const userAge = userAgeRef.value;
+  console.log(userAge);
   const distance = parseFloat(distanceRef.value.replace(",", "."));
-console.log(typeof userAge);
-  if (userAge !== "" && distance !== NaN) {
+  console.log(distance);
+  console.log(typeof userAge);
+  if (userAge !== "" && distance !== isNaN) {
     let ticketPrice = distance * tariff;
     if (userAge === "min") {
       ticketPrice *= 1 - discountUnderAge / 100;
@@ -72,40 +77,41 @@ console.log(typeof userAge);
     }
     passengerRef.innerHTML = firstNameRef.value;
     offerRef.innerHTML = message;
-    const carriage = Math.floor(
-      Math.random() * (maxCarriage - minCarriage + 1) + minCarriage
-    );
+    const carriage = randomizer(minCarriage, maxCarriage);
     carriageRef.innerHTML = carriage;
-    const cpCode = Math.floor(
-      Math.random() * (maxCodeCp - minCodeCp + 1) + minCodeCp
-    );
+    const cpCode = randomizer(minCodeCp, maxCodeCp);
+
     cpCodeRef.innerHTML = cpCode.toString().padStart(6, "0");
     ticketPriceRef.innerHTML = ticketPrice.toFixed(2).toString() + " €";
 
-    if(ticketVisible){
-      toggleTicketRef.classList.remove('d-none');
+    if (ticketVisible) {
+      toggleTicketRef.classList.remove("d-none");
     }
   }
 });
 
-
-
-
-
 // evento onclick del pulsante Annulla
-buttonResRef.addEventListener('click', function() {
+buttonResRef.addEventListener("click", function () {
+  firstNameRef.value = "";
+  passengerRef.innerHTML = "";
+  distanceRef.value = "";
+  userAgeRef.value = "";
+  offerRef.innerHTML = "";
+  carriageRef.innerHTML = "";
+  cpCodeRef.innerHTML = "";
+  ticketPriceRef.innerHTML = "";
 
-  firstNameRef.value = '';
-  passengerRef.innerHTML = '';
-  distanceRef.value = '';
-  userAgeRef.value = '';
-  offerRef.innerHTML = '';
-  carriageRef.innerHTML = '';
-  cpCodeRef.innerHTML = '';
-  ticketPriceRef.innerHTML = '';
-
-  if(ticketVisible) {
-    toggleTicketRef.classList.add('d-none');
+  if (ticketVisible) {
+    toggleTicketRef.classList.add("d-none");
   }
-
 });
+
+/**
+ *
+ * @param {number} min
+ * @param {number} max
+ */
+function randomizer(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
+}
+
