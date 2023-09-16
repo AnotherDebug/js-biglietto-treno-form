@@ -63,13 +63,8 @@ buttonGenRef.addEventListener("click", generator);
 // evento onclick del pulsante Annulla
 buttonResRef.addEventListener("click", function () {
   firstNameRef.value = "";
-  passengerRef.innerHTML = "";
   distanceRef.value = "";
   userAgeRef.value = "";
-  offerRef.innerHTML = "";
-  carriageRef.innerHTML = "";
-  cpCodeRef.innerHTML = "";
-  ticketPriceRef.innerHTML = "";
 
   if (ticketVisible) {
     toggleTicketRef.classList.add("d-none");
